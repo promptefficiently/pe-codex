@@ -1,0 +1,10 @@
+{
+  "name": "prompt-efficiently",
+  "version": "0.2.0",
+  "description": "Explicit PE input-token estimate and tightening commands. Sign-in required.",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "author": {
+    "name": "Prompt Efficiently"
+  },
+  "license": "MIT"
+}
