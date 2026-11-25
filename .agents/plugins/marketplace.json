@@ -1,0 +1,20 @@
+{
+  "name": "pe-local",
+  "interface": {
+    "displayName": "Prompt Efficiently"
+  },
+  "plugins": [
+    {
+      "name": "prompt-efficiently",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

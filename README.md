@@ -1,6 +1,6 @@
 # Prompt Efficiently for codex
 
-Release candidate. Local host installation verified; see the exact remaining acceptance checks below. Explicit rough input-token estimates and conservative prompt tightening. Not automatic agent metering. Same PE account, free quota and Pro entitlement as the website. No prompt text is sent to PE.
+Explicit rough input-token estimates and conservative prompt tightening. Not automatic agent metering. Same PE account, free quota and Pro entitlement as the website. No prompt text is sent to PE.
 
 ## Prerequisites and setup
 Desktop, Python 3.10+, a secure OS credential store, and this folder. In your own terminal create a virtual environment and install the bundled requirements:
@@ -19,14 +19,14 @@ The helper reads only stdin, never your workspace. Pipe a prompt from your own t
 ## Codex local plugin (tested with CLI 0.171.0)
 From your own terminal, run:
 
-    codex plugin marketplace add /absolute/path/to/this-folder
+    codex plugin marketplace add promptefficiently/pe-codex
     codex plugin add prompt-efficiently@pe-local
     codex plugin list
 
-This is a local catalog, not an online marketplace publication. The test install recognizes this package and enables it without an AI inference request. Configure the helper Python path before use.
+The install adds this repository as a marketplace. The test install recognizes this package and enables it without an AI inference request. Configure the helper Python path before use.
 
 ## Codex skill alternative
-The folder has a portable plugin manifest and `skills/pe/SKILL.md`. For the simplest local skill install, copy the `skills/pe` directory under your personal `.agents/skills/` directory and keep pe.py plus requirements.txt alongside it. Restart Codex and explicitly invoke `$pe` with supplied prompt text. Set the helper virtual-environment Python path in your session. Portable local plugin installation varies by Codex surface/version; the public directory route is not part of this build.
+The folder has a portable plugin manifest and `skills/pe/SKILL.md`. For the simplest local skill install, copy the `skills/pe` directory under your personal `.agents/skills/` directory and keep pe.py plus requirements.txt alongside it. Restart Codex and explicitly invoke `$pe` with supplied prompt text. Set the helper virtual-environment Python path in your session. Portable local plugin installation varies by Codex surface/version.
 
 ## Limits and release gate
 Rough word-based input tokens only, no output/context/tool cost or subscription-credit estimate.
